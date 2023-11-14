@@ -15,7 +15,7 @@ void insertionsort(int *a,int n)
 	{
 		key = a[i];
 		j = i -1;
-		while(j>=0 && a[j]<key)
+		while(j>=0 && a[j]>key)
 		{
 			a[j +1] = a[j];
 			j--;
@@ -25,25 +25,22 @@ void insertionsort(int *a,int n)
 }
 int main()
 {
-	/*int a[] = {12 , 54 , 65 , 7 , 23 , 9};
-	int n = 6;
-	printarray(a , n);
-	insertionsort(a , n);
-	printarray(a , n);
-	*/
-	int i,a[50],size,n;
-	printf("enter array size: ");
-	scanf("%d",&n);
-	printf("enter the array element :\n ");
-	for(int i = 1;i<n;i++)
-	{
-		scanf("%d ",&a[i]);
-	}
-	//printf("\n");
-    printarray(a , n);
-	insertionsort(a , n);
-	printarray(a , n);
 	
+			int n;
+  printf("Enter the size of the array:");
+  scanf("%d",&n);
+  int arr[n];
+  printf("Enter %d integers:",n);
+  for (int i = 0 ; i < n; i++){
+      scanf("%d", &arr[i]) ;
+    }
+
+
+ insertionsort(arr, n);  
+  printf("Sorted array: ");  
+    for (int i = 0; i < n; i++) {  
+    printf("%d ", arr[i]);  
+  }  
+  printf("\n");
 	return 0;
 }
-
