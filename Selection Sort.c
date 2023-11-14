@@ -38,14 +38,21 @@ void selectionsort(int*a,int n)
 
 int main()
 {
-	int a[] = {9,1,4,14,4,15,6};
-//	int a[] = {1, 2, 3, 4, 5, 6};
-	int n = 7;
-	printarray(a , n);
-    selectionsort(a ,n);
+		int n;
+  printf("Enter the size of the array:");
+  scanf("%d",&n);
+  int arr[n];
+  printf("Enter %d integers:",n);
+  for (int i = 0 ; i < n; i++){
+      scanf("%d", &arr[i]) ;
+    }
 
 
-	printarray(a , n);
-
+  selectionsort(arr, n);  
+  printf("Sorted array: ");  
+    for (int i = 0; i < n; i++) {  
+    printf("%d ", arr[i]);  
+  }  
+  printf("\n");
 	return 0;
 }
